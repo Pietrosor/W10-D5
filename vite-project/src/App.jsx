@@ -7,7 +7,7 @@ import WeatherInfo from "./components/WeatherInfo"
 import "bootstrap/dist/css/bootstrap.min.css"
 
 const App = () => {
-  const cities = ["Roma", "New York", "Napoli", "Madrid", "Berlino"]
+  const cities = ["Miami", "New York", "Napoli", "Madrid", "Berlino"]
   const [selectedCity, setSelectedCity] = useState(null)
   const [weatherData, setWeatherData] = useState({})
   const [recentCities, setRecentCities] = useState([])
@@ -94,7 +94,16 @@ const App = () => {
   }
 
   return (
-    <div className="d-flex flex-column min-vh-100">
+    <div
+      className="d-flex flex-column min-vh-100"
+      style={{
+        backgroundImage:
+          "url('https://th.bing.com/th/id/OIP.Pl-Bu34nqanPuU1pggsKJQHaE7?rs=1&pid=ImgDetMain')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        minHeight: "100vh",
+      }}
+    >
       <Header />
       <main
         className="d-flex flex-column justify-content-center align-items-center flex-grow-1 mt-0"
